@@ -13,5 +13,4 @@ The generation of a jurisprudence similarity search engine involves three primar
 
 In summary, the creation of a jurisprudence similarity search engine involves collecting data from CENDOJ through web scraping, obtaining relevant PDF links, and then processing and storing the extracted information for future use.
 
-
-<!-- <img src="images/scraping_explained.png" width="950" height="250" />*Visual explanation of all steps required to obtain the information that is stored into a local data base* -->
+<img src="images/scraping_explained.png" width="950" height="250" />*Visual explanation of all steps required to obtain the information that is stored into a local data base*
