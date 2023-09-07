@@ -1,0 +1,17 @@
+email:
+  id: 'maria.vivo1203@gmail.com'
+  href: 'mailto:'
+  title: 'Email'
+  fa-icon: 'fa fa-envelope'
+
+linkedin:
+  id: 'maria-vivo-pascual'
+  href: 'https://www.linkedin.com/in/'
+  title: 'Linkedin'
+  fa-icon: 'fab fa-linkedin'
+
+github:
+  id: 'mvivopas'
+  href: 'https://github.com/'
+  title: 'GitHub'
+  fa-icon: 'fab fa-github'
