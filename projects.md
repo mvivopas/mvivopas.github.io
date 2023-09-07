@@ -3,6 +3,10 @@ layout: page
 title: Projects
 ---
 
-<p class="message">
-  Here I will have a post for every active project 
-</p>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
