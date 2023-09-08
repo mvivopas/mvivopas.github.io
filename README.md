@@ -1,5 +1,5 @@
 
-# Setting Up Your Personal Website with GitHub Pages and Hyde
+# Setting Up Your Personal Website with GitHub Pages and Hyde 🛠️📇
 
 In this documentation, I will guide you through the process of creating your personal blog using GitHub Pages as your hosting platform and Hyde as a static web generator. Please note that the instructions are based on using a Mac M2, and there may be slight variations when using other devices.
 
