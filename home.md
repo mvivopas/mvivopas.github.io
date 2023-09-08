@@ -58,6 +58,15 @@ order: 1
         <div class="gallery-item">
             <img src="images/photo-dump/meri_pa.jpg" alt="Inspiration 5">
         </div>
+        <div class="gallery-item">
+            <img src="images/photo-dump/niels.jpg" alt="Inspiration 3">
+        </div>
+        <div class="gallery-item">
+            <img src="images/photo-dump/solete.jpg" alt="Inspiration 4">
+        </div>
+        <div class="gallery-item">
+            <img src="images/photo-dump/meri_franki.jpg" alt="Inspiration 5">
+        </div>
         <!-- Add more images as needed -->
     </div>
 </body>
