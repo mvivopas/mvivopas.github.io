@@ -8,13 +8,11 @@ order: 3
   {% for post in site.posts %}
   <div class="post">
     <h3 class="post-title">
-      <a href="{{ post.url }}">
+      <a href="{{ post.url }}" style="color: RoyalBlue; text-decoration: underline;">
         {{ post.title }}
       </a>
     </h3>
-
     <span class="post-date">{{ post.date | date_to_string }}</span>
-
   </div>
   {% endfor %}
 </div>
