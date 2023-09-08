@@ -1,31 +1,27 @@
 ---
-layout: default
-title: Home
+layout: page
+title: Projects
+order: 3
 ---
 
 <div class="posts">
+  {% for post in site.posts %}
   <div class="post">
-    <span class="post-date">"Photo dump"</span>
-  </div>
-</div>
-
-<!-- <div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
+    <h3 class="post-title">
       <a href="{{ post.url }}">
         {{ post.title }}
       </a>
-    </h1>
+    </h3>
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    {{ post.content }}
   </div>
   {% endfor %}
 </div>
 
-<div class="pagination">
+
+
+<!-- <div class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
   {% else %}

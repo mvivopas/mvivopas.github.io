@@ -43,6 +43,8 @@ url: https://mvivopas.github.io
 github_username:    mvivopas
 linkedin_username:  maria-vivo-pascual
 
+sass:
+  sass_dir: _sass
 
 # Build settings
 theme: minima
