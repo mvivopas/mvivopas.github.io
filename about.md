@@ -5,7 +5,7 @@ order: 2
 ---
 
 <div class="message">
-  You want a PDF version of my CV ? Simply head this [way][cv-pdf] !
+  You want a PDF version of my CV? Simply head this <a href="https://drive.google.com/file/d/11ZKYcuJF9V__bzIWSOy9KnPci4fEQYQu/view?usp=share_link">way</a>!
 </div>
 
 # 👩🏽‍🏫 Education
