@@ -15,16 +15,17 @@ Consecuently, the driver will have to access a total of "number of searches * 20
 
 ### Scrape CENDOJ search results
 
-There are 
+To scrape the CENDOJ searcher, first of all, the specific parameters have to be inputed to the `arguments.json` file, such as dates and search queries. Once settings are defined, the preprocessor will open the CENDOJ website and input the parameter values, a total of `number_of_searches` will be performed, from each one, a maximum of 200 results will be displayed, organized in pages of 20. Every result will contain an _intermediate link_ and its date. This link is saved into a numpy array and the last date from a given search and its round are saved. This way, if the process stops, it can be resumed to the last date scraped and the same round. Furthermore, no duplicate links are saved, a set is used to gather urls in order to guarantee this.
 
+### Scrape jurisprudence pdf links
 
-The first step involves collecting the necessary jurisprudence data to build the search engine's database. This data is sourced from the CENDOJ website using a "data_scraper", which accesses the CENDOJ search platform and inputs specific parameters from the `arguments.json` file, such as dates and search queries. The search area for this explanation is set to Barcelona, although the user's ability to select locations might be added later. Given that each search returns a maximum of 200 documents, and to ensure comprehensive results, multiple searches are performed using the last jurisprudence date as a reference. Consequently, the total number of documents obtained is calculated as the "number of searches * 200.". For every search, the links
-that point to the PDFs with the jurisprudence are scraped. However, these links have to be accessed to obtain a final link, from which It is possible to extract the textual information from an embeded PDF.
+Once the first process has finished, the second part triggers, which consists in accessing every _intermediate link_ and extracting the link to the jurisprudence document. This process one of the most intensives, as a high number of requests will be generated to the CENDOJ website and it is likely that problems arise. For this reason, a SQLite is created `jurisprudence.db` in which a table `jurisprudence_urls` will store the _intermediate links (base link)_ from which a _jurisprudence link (final link)_ has been retrieved. This way, all information is stored when obtained and if the process fails anytime, it can be resumed with 0 loss.
 
-2. **Scraping Jurisprudence Links:** The CENDOJ platform scraping process involves three critical stages: accessing the search site, extracting links to the embedded jurisprudence documents, and acquiring links to the final PDF versions. To obtain the final PDF link for a specific jurisprudence document, the process entails visiting the dynamic PDF link, extracting intermediate PDF links, and then accessing static PDF links that allow for text extraction. In essence, the scraper collects all available intermediate links to dynamic PDFs from the search platform, subsequently visiting each link to extract the static PDF link for comprehensive text scraping.
+### Textual information extraction, organization and storage
 
-3. **Data Processing and Storage:** Once all static PDF links have been gathered, the data processing step begins, managed by the "data_preprocessor." This component's primary function is to extract textual content from the provided links, followed by the selection of pertinent information. The selected information is then stored in a localized SQLite database, ensuring accessibility for subsequent searches and analyses.
+Once all static PDF links have been gathered, the data processing step begins. This component's primary function is to extract textual content from the provided links, followed by the selection of pertinent information. The selected information is then stored in the SQLite database `jurisprudence.db`, in the table `jurisprudence_info`, ensuring accessibility for subsequent searches and analyses. The following information is stored:
 
-In summary, the creation of a jurisprudence similarity search engine involves collecting data from CENDOJ through web scraping, obtaining relevant PDF links, and then processing and storing the extracted information for future use.
+- 
+
 
 <img src="/images/scraping_explained.png" width="900" height="220" />*Visual explanation of all steps required to obtain the information that is stored into a local data base*
