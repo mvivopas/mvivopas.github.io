@@ -21,6 +21,10 @@ To scrape the CENDOJ searcher, first of all, the specific parameters have to be 
 
 Once the first process has finished, the second part triggers, which consists in accessing every _intermediate link_ and extracting the link to the jurisprudence document. This process one of the most intensives, as a high number of requests will be generated to the CENDOJ website and it is likely that problems arise. For this reason, a SQLite is created `jurisprudence.db` in which a table `jurisprudence_urls` will store the _intermediate links (base link)_ from which a _jurisprudence link (final link)_ has been retrieved. This way, all information is stored when obtained and if the process fails anytime, it can be resumed with 0 loss.
 
+#### Tricks to be a tipo de incógnito
+
+TODO.
+
 ### Textual information extraction, organization and storage
 
 Once all static PDF links have been gathered, the data processing step begins. This component's primary function is to extract textual content from the provided links, followed by the selection of pertinent information. The selected information is then stored in the SQLite database `jurisprudence.db`, in the table `jurisprudence_info`, ensuring accessibility for subsequent searches and analyses. The following information is stored:
