@@ -4,6 +4,10 @@ title: About
 order: 2
 ---
 
+<div class="message">
+  You want a PDF version of my CV ? Simply head this [way][cv-pdf] !
+</div>
+
 # 👩🏽‍🏫 Education
 
 - **Degree in Statistics**
@@ -48,7 +52,7 @@ Developed a Medical Section Identification System ([Paper][med-sections])
 Partially Responsible for the multilingual transformation of Ixchel, the leading software
 
 Partially Responsible for the topic-study specific pipes' project, developing pipes and pipelines for software customization
-
+[cv-pdf]: https://drive.google.com/file/d/11ZKYcuJF9V__bzIWSOy9KnPci4fEQYQu/view?usp=share_link
 [tfg]: https://diposit.ub.edu/dspace/handle/2445/172116
 [tfm]: https://drive.google.com/file/d/17ZPYt94DdkMGd2I7hXkwi6o6qnQ9B0aa/view?usp=share_link
 [tfm-git]: https://github.com/mvivopas/jurisprudence-semantic-search
