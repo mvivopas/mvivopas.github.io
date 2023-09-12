@@ -25,7 +25,27 @@ Once the first process has finished, the second part triggers, which consists in
 
 Once all static PDF links have been gathered, the data processing step begins. This component's primary function is to extract textual content from the provided links, followed by the selection of pertinent information. The selected information is then stored in the SQLite database `jurisprudence.db`, in the table `jurisprudence_info`, ensuring accessibility for subsequent searches and analyses. The following information is stored:
 
-- 
+    - id_cendoj: The CENDOJ id extracted from the document.
+
+    - date: The date extracted from the document.
+
+    - keyphrases: The content under the section "Cuestiones" in the document.
+
+    - recurring_part: The content under the section "Parte recurrente/apelante" in the document.
+
+    - appellant: The content under the section "Parte recurrida/apelada" in document
+
+    - factual_background: The content under the section "Antecedentes de hecho" in the document.
+
+    - factual_grounds: The content under the section "Fundamentos" in the document.
+
+    - verdict_arguments: The content under the section "Fallo" in the document.
+
+    - first_verdict: The first fallo extracted from the antecedentes section.
+
+    - last_verdict: The fallo definitivo extracted from the document.
+
+    - legal_costs: A flag (1 or 0) indicating if "Costas Procesales" were found in document.
 
 
 <img src="/images/scraping_explained.png" width="900" height="220" />*Visual explanation of all steps required to obtain the information that is stored into a local data base*
